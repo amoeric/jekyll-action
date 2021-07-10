@@ -5,6 +5,8 @@ LABEL repository="https://github.com/helaili/jekyll-action"
 LABEL homepage="https://github.com/helaili/jekyll-action"
 LABEL maintainer="Alain Hélaïli <helaili@github.com>"
 
+RUN apt-get install node
+
 RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
