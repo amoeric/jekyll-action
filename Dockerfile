@@ -7,6 +7,10 @@ LABEL maintainer="Amoeric <amoeric@github.com>"
 
 RUN apk add --update nodejs npm
 
+COPY ./package.json ./
+
+RUN npm install
+
 RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
