@@ -7,8 +7,6 @@ LABEL maintainer="Amoeric <amoeric@github.com>"
 
 RUN apk add --update nodejs npm
 
-COPY ./package.json ./
-
 RUN npm install
 
 RUN apk add --no-cache git build-base
